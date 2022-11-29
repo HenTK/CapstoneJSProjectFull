@@ -295,13 +295,28 @@
 }
 .app .app-container .banner .card-transform .cart .final strong {
   font-size: 20px;
-  -webkit-animation: mymoveIn 0.5s;
-          animation: mymoveIn 0.5s;
+  -webkit-animation: mymoveIn 0.1s;
+          animation: mymoveIn 0.1s;
 }
-.app .app-container .banner .card-transform .cart .final .buy, .app .app-container .banner .card-transform .cart .final .clear {
+.app .app-container .banner .card-transform .cart .final .action {
+  -webkit-animation: mymoveIn 0.1s;
+          animation: mymoveIn 0.1s;
+  transition: all 0.5s;
+}
+.app .app-container .banner .card-transform .cart .final .action .buy, .app .app-container .banner .card-transform .cart .final .action .clear {
   font-size: 20px;
   padding: 15px 5px;
+  margin: 0 5px;
+  transition: all 0.5;
+  border-radius: 5px;
+  background-color: rgba(0, 0, 0, 0.289);
+  border: none;
   cursor: pointer;
+}
+.app .app-container .banner .card-transform .cart .final .action .buy:hover, .app .app-container .banner .card-transform .cart .final .action .clear:hover {
+  color: white;
+  text-shadow: white;
+  background-color: black;
 }
 .app .app-container .banner .card-transform .none {
   display: none;
