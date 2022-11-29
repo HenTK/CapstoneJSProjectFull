@@ -22,8 +22,8 @@ let getProductsList = () => {
       );
       return product;
     });
+    renderProductList(productServiceList.productList);
   });
-  renderProductList(productServiceList.productList);
 };
 
 let domId = (id) => document.getElementById(id);
