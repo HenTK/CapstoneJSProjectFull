@@ -1,0 +1,333 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+  }
+
+.app{
+    .app-container{
+        .banner{
+            height: 1000px;
+            width: 100%;
+            position: relative;
+            background: linear-gradient(to left, #0008ff, #ff1100);
+            overflow: hidden;
+            transition: all .5s;
+            .app-title{
+                font-size: 30px;
+                font-weight: 500;
+                color: white;
+                text-align: center;
+                margin-top: 30px;
+            }
+            .form-group{
+                z-index: 99;
+                position: absolute;
+                top:0;
+                left: 0;
+                margin-top: 30px;
+                padding: 15px;
+                display: flex;
+                flex-direction: row;
+                text-align: center;
+                align-items: center;
+                .app-label{
+                    background-color: #260235b9;
+                    padding: 2px 5px;
+                    color: white;
+                    border-radius: 3px 0 0 3px;
+                }
+                .app-select{
+                    padding-left: 0px;
+                    .custom-select{
+                        font-size: 1rem;
+                        display: block;
+                        width: 150px;
+                        text-align: center;
+                        border-radius: 0 3px 3px 0;
+                    }
+                }
+            }
+            .cartIcon{
+                margin-top: 30px;
+                position: absolute;
+                font-size: 2rem;
+                top: 0;
+                right: 0;
+                color: black;
+                border: none;
+                padding: 15px;
+                padding: none;
+                cursor: pointer;
+                transition: all .5s;
+                .quantity{
+                    position: absolute;
+                    top: 0;
+                    right: 1%;
+                    font-size: 15px;
+                    width: 20px;
+                    height: 20px;
+                    background-color: transparent;
+                    padding: none;
+                    margin: none;
+                    border-radius: 50%;
+                    color: red;
+                    line-height: 20px;
+                    backdrop-filter: blur(100px);
+                }
+            }
+            .cartIcon:hover {
+                color: white
+            }
+            .main-cart{
+                display: flex;
+                flex-direction: row;
+                position: absolute;
+                justify-content: space-evenly;
+                flex-wrap: wrap;
+                width: 90%;
+                height: auto;
+                margin: 5%;
+                align-self: center;
+                align-items: center;
+                .card{
+                    padding: 15px 0px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-start;
+                    position: relative;
+                    flex-shrink: 0;
+                    height: auto;
+                    width: 250px;
+                    background-color: #ffffff;
+                    border-radius: 20px;
+                    overflow: hidden;
+                    box-shadow: rgb(0 0 0 / 30%) 0px 19px 38px, rgb(0 0 0 / 22%) 0px 15px 12px;
+                    transition: all 0.5s;
+                    font-size: 12px;
+                    transition: all .5s;
+                    margin-bottom: 10px;
+                    .state{
+                        text-align: right;
+                        color:#8942a8;
+                        padding-right: 15px;
+                    }
+                    .none{
+                        display: none;
+                    }
+                    .img-container{
+                        width: 185px;
+                        height: 185px;
+                        align-self: center;
+                        padding: 30px 20px;
+                        margin-bottom: 100px;
+                        img{
+                            width: 100%;
+                            height: 100%;
+                            object-fit: contain;
+                        }
+                    }
+                    .details{
+                        font-size: 10px;
+                        position: absolute;
+                        height: auto;
+                        width: 100%;
+                        background-color: #d1d6e5;
+                        border-radius: 20px;
+                        padding: 20px;
+                        left: 0;
+                        bottom: 0;
+                        transition: 0.25s;
+                        .title{
+                            font-size: 20px;
+                            padding-bottom: 5px;
+                        }
+                        .info{
+                            transition: all .5s;
+                            display: none;
+                        }
+                        .display-info{
+                            display: flex;
+                            flex-direction: row;
+                            vertical-align: bottom;
+                            justify-content: space-between;
+                            p{
+                                font-size: 20px;
+                                align-items: center;
+                            }
+                        }
+                        .add-btn{
+                            height: 40px;
+                            border-radius: 20px;
+                            border: solid;
+                            border-width: 1px;
+                            cursor: pointer;
+                            font-size: 10px;
+                            padding: 0 5px;
+                            background-color: #d2d6e0;
+                        }
+                    }
+                    .qty-change div{
+                        display: flex;
+                        flex-direction: row;
+                    }
+                }
+                .card:hover .details .info{
+                    transition: all .5s;
+                    display: block;
+                }
+                .card:hover{
+                    height: 350px;
+                    scale: 1.2;
+                    z-index: 50;
+                    margin: 50px 20px 50px 20px;
+
+                }
+                .none{
+                    display: none;
+                }
+            }
+            .card-transform{
+                #overlay{
+                    top: 0;
+                    right: 0;
+                    position: absolute;
+                    z-index: 100;
+                    background-color: #41125378;
+                    width: 100%;
+                    height: 100%;
+                    animation: mymoveIn .5s;
+                    backdrop-filter: blur(10px);
+                }
+                .cart{
+                    z-index: 101;
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    transition: width 2s;
+                    background-color: white;
+                    width: 50%;
+                    height: 100%;
+                    animation: mymoveIn .5s;
+                    transition: all .5s;
+                    color: black;
+                    .closeCardBtn{
+                        position: absolute;
+                        top: 0;
+                        right: 0;
+                        margin: 15px;
+                        color: black;
+                        background-color: white;
+                        border: none;
+                        transition: all .5s;
+                        font-size: 30px;
+                        cursor: pointer;
+                    }
+                    .closeCardBtn:hover{
+                        color: rgba(0, 0, 0, 0.247);
+                    }
+                    h2{
+                        color: black;
+                        text-align: center;
+                        font-size: 40px;
+                        padding: 20px 0px;
+                    }
+                    .cart-items{
+                        text-align: center;
+                        .empty-cart{
+                            display: block;
+                        }
+                        .has-cart{
+                            display: none;
+                        }
+                        span{
+                            color: black;
+                        }
+                        .table{
+                            padding: 15px;
+                            .text-white{
+                                color: black;
+                            }
+                            color: black;
+                            width: 100%;
+                            .trash{
+                                cursor: pointer;
+                            }
+                            .quantityDec, .quantityInc {
+                                cursor: pointer;
+                            }
+                            td{
+                                backdrop-filter: blur(30px);
+                                background-color: white;
+                                .renderCartProducts{
+                                    width: 50px;
+                                    height: 50px;
+                                    margin: 5px 0px;
+                                }
+                            }
+                            td::before{
+                                content: "";
+                                width: 105%;
+                                height: 1px;
+                                background-color: #000000;
+                                position: absolute;
+                                bottom: 0;
+                                left: 0
+                            }
+                        }
+                    }
+                    .final{
+                        width: 48%;
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: space-between;
+                        position: fixed;
+                        bottom: 0;
+                        right: 0;
+                        margin: 0 15px 15px 0;
+                        transition: all .5s;
+                        color: black;
+                        strong{
+                            font-size: 20px;
+                            animation: mymoveIn .5s;
+                        }
+                        .buy, .clear{
+                            font-size: 20px;
+                            padding: 15px 5px;
+                            cursor: pointer;
+                        }
+                    }
+                }
+                .none{
+                    display: none;   
+                }
+                .changeBar {
+                    animation-direction: reverse;
+                  }
+            }
+
+
+        }
+}
+}
+
+@keyframes mymoveIn {
+    0%   {width: 0%;}
+    100% {width: 50%;}
+  }
+@keyframes mymoveOut {
+    0%   {width: 50%;}
+    100% {width: 0%;}
+  }
+  @keyframes backgroundAnimate{
+    0%{
+        background-position: 0%;
+    }
+    50%{
+        background-position: 100%;
+    }
+    100%{
+        background-position: 0%;
+    }
+}
