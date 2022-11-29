@@ -31,6 +31,7 @@
   flex-direction: row;
   text-align: center;
   align-items: center;
+  overflow: hidden;
 }
 .app .app-container .banner .form-group .app-label {
   background-color: rgba(38, 2, 53, 0.7254901961);
@@ -170,6 +171,11 @@
   font-size: 10px;
   padding: 0 5px;
   background-color: #d2d6e0;
+  transition: all 0.5s;
+}
+.app .app-container .banner .main-cart .card .details .add-btn:hover {
+  color: white;
+  background-color: #000000;
 }
 .app .app-container .banner .main-cart .card .qty-change div {
   display: flex;
@@ -259,8 +265,21 @@
 .app .app-container .banner .card-transform .cart .cart-items .table .trash {
   cursor: pointer;
 }
+.app .app-container .banner .card-transform .cart .cart-items .table .trash:hover {
+  color: rgba(0, 0, 0, 0.5843137255);
+}
 .app .app-container .banner .card-transform .cart .cart-items .table .quantityDec, .app .app-container .banner .card-transform .cart .cart-items .table .quantityInc {
   cursor: pointer;
+  transition: all 0.5s;
+  border: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  align-items: center;
+}
+.app .app-container .banner .card-transform .cart .cart-items .table .quantityDec:hover, .app .app-container .banner .card-transform .cart .cart-items .table .quantityInc:hover {
+  color: #ffffff;
+  background-color: black;
 }
 .app .app-container .banner .card-transform .cart .cart-items .table td {
   -webkit-backdrop-filter: blur(30px);

@@ -32,6 +32,7 @@
                 flex-direction: row;
                 text-align: center;
                 align-items: center;
+                overflow: hidden;
                 .app-label{
                     background-color: #260235b9;
                     padding: 2px 5px;
@@ -166,6 +167,11 @@
                             font-size: 10px;
                             padding: 0 5px;
                             background-color: #d2d6e0;
+                            transition: all .5s;
+                        }
+                        .add-btn:hover{
+                            color: white;
+                            background-color: #000000;
                         }
                     }
                     .qty-change div{
@@ -254,8 +260,21 @@
                             .trash{
                                 cursor: pointer;
                             }
+                            .trash:hover{
+                                color: #00000095;
+                            }
                             .quantityDec, .quantityInc {
                                 cursor: pointer;
+                                transition: all .5s;
+                                border: none;
+                                width: 20px;
+                                height: 20px;
+                                border-radius: 50%;
+                                align-items: center;
+                            }
+                            .quantityDec:hover, .quantityInc:hover {
+                                color: #ffffff;
+                                background-color: black;
                             }
                             td{
                                 backdrop-filter: blur(30px);
