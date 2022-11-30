@@ -263,6 +263,8 @@
   color: black;
 }
 .app .app-container .banner .card-transform .cart .cart-items .table .trash {
+  transition: all 0.5s;
+  font-size: 20px;
   cursor: pointer;
 }
 .app .app-container .banner .card-transform .cart .cart-items .table .trash:hover {
@@ -272,8 +274,8 @@
   cursor: pointer;
   transition: all 0.5s;
   border: none;
-  width: 20px;
-  height: 20px;
+  width: 25px;
+  height: 25px;
   border-radius: 50%;
   align-items: center;
 }

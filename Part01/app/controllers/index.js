@@ -22,6 +22,7 @@ let getProductsList = () => {
       );
       return product;
     });
+    console.log(productServiceList.productList);
     renderProductList(productServiceList.productList);
   });
 };
@@ -67,12 +68,7 @@ domId("selLoai").onchange = (event) => {
 window.onload = function () {
   getProductsList();
   getProductListFromLocalStorage();
-  if (cart[0].quantity == "") {
-    document.getElementById("empty-cart").style.display = "block";
-  } else {
-    document.getElementById("empty-cart").style.display = "none";
-    total(cart);
-  }
+  displayNone(cart);
 };
 
 const addItem = (id) => {
@@ -94,6 +90,7 @@ const addItem = (id) => {
   }
 
   cart.push(cartItem);
+  displayNone(cart);
   renderCart(cart);
   renderQuantity();
   setLocalStorage();
@@ -243,4 +240,13 @@ const getProductListFromLocalStorage = () => {
   cart = data;
   renderCart(cart);
   renderQuantity();
+};
+
+const displayNone = (cart) => {
+  if (cart[0].quantity == "") {
+    document.getElementById("empty-cart").style.display = "block";
+  } else {
+    document.getElementById("empty-cart").style.display = "none";
+    total(cart);
+  }
 };
