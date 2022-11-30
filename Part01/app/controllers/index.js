@@ -22,7 +22,6 @@ let getProductsList = () => {
       );
       return product;
     });
-    console.log(productServiceList.productList);
     renderProductList(productServiceList.productList);
   });
 };
