@@ -1,6 +1,6 @@
 Phân chia công việc:
-Hên: Phần 1
-Phát: Phần 2
+Thạch Kim Hên: Phần 1
+Võ Lê Trường Phát: Phần 2
 ----------------------------------------------------------------------------------------------------------------
 Link Deploy:
 Phần 1: https://capstone-js-project-deploy.vercel.app/
